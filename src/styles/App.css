@@ -1,0 +1,114 @@
+:root {
+    --overlay-color: rgb(77, 77, 77);
+    --box-color: #fff;
+    --tint-color: #1a80ba;
+    --border-radius: 5px;
+    --font-size-default: 16px;
+}
+
+* {
+    text-decoration: none;
+    font-family: Roboto;
+    transition: 0.15s ease;
+}
+
+p {
+    color: black;
+    margin: unset;
+    font-size: var(--font-size-default);
+}
+
+select {
+    background-color: unset;
+    border: solid 1px var(--overlay-color);
+    color: black;
+    outline: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: var(--font-size-default);
+    border-radius: var(--border-radius);
+}
+
+button, a {
+    background-color: var(--overlay-color);
+    color: black;
+    outline: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: var(--font-size-default);
+    border-radius: var(--border-radius);
+}
+
+input, textarea {
+    background-color: unset;
+    border: solid 1px var(--overlay-color);
+    color: black;
+    outline: none;
+    padding: 8px;
+    font-size: var(--font-size-default);
+    border-radius: var(--border-radius);
+    resize: none;
+}
+
+.layout {
+    display: flex;
+}
+
+.layout.horizontal {
+    flex-direction: row;
+}
+
+.layout.vertical {
+    flex-direction: column;
+}
+
+.layout.gap {
+    gap: 5px;
+}
+
+.layout.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.layout.stretch {
+    justify-content: space-between;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.header {
+    color: var(--tint-color);
+    text-shadow: -3px 3px rgb(from var(--tint-color) r g b/25%);
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.box, button, input {
+    background-color: var(--box-color);
+    border-radius: var(--border-radius);
+    box-shadow: -3px 3px rgb(from var(--tint-color) r g b/25%);
+    border: solid 1px var(--tint-color);
+}
+
+.redirect-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+    border-radius: var(--border-radius);
+}
+
+@media (hover: hover) {
+    button:hover {
+        background-color: var(--tint-color);
+        color: white;
+    }
+}
